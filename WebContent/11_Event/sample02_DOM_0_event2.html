@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM Level 0 - 인라인</title>
+<script type="text/javascript">
+	function fun1(n){
+		console.log("fun1", n, event);
+	}
+	function fun2(n, n2){
+		console.log("fun2", n, n2, event);
+	}
+	function fun3(n, n2, n3 = 100){	//default 파라미터
+		console.log("fun3", n, n2, n3);
+	}
+	function fun4(...n){	//배열로
+		console.log("fun4", n);
+	}
+	function fun5(){
+		var event_name = event.target.innerHTML;
+		console.log("fun5", event, event_name );	//ok5_이벤트객체
+	}
+/* 	innerHTML
+	innerText
+	outerText
+	outerHTML */
+	
+</script>
+
+</head>
+<h2>DOM Level 0의 인라인 방식</h2>
+<button onclick ="fun1(10)">OK</button>
+<button onclick ="fun2(10, '홍길동')">OK2</button>
+<button onclick ="fun3(20, '홍길동2')">OK3</button>
+<button onclick ="fun4(30, '홍길동3', 3000)">OK4</button>
+<button onclick ="fun5()">OK5_이벤트객체</button>
+	
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function fun1(){
+		alert("fun1")
+		console.log("fun1", event);
+		
+		if(true){
+			//userid와 passwd값을 모두 입력한 경우
+		}else{
+		alert("아이디와 비밀번호 입력 필수");
+		event.preventDefault();	//	서브밋(submit) 방지
+		}
+	}
+	
+	function fun2(){
+		if(true){
+			//userid와 passwd값을 모두 입력한 경우
+			return true;
+		}else{
+			return false;	//입력하지 않은 경우
+		}
+		
+	}
+
+</script>
+
+
+</head>
+<body>
+<h1>event.preventDefault()실습1</h1>
+<form action ="sample02_DOM_0_event1.html" onsubmit = "fun1()">
+	아이디:<input type="text" name = "userID"><br>
+	비밀번호:<input type="password" name = "passWD"><br>
+	<input type="submit" value = "로그인1">
+	<button>로그인2</button>
+	<input type="button" value = "로그인3">	<!-- submit이 이뤄지지 않음  -->
+</form>
+
+
+<h1>return false실습2</h1>
+<form action ="sample02_DOM_0_event1.html" onsubmit = "return fun2()">
+	아이디:<input type="text" name = "userID"><br>
+	비밀번호:<input type="password" name = "passWD"><br>
+	<input type="submit" value = "로그인1">
+	<button>로그인2</button>
+	<input type="button" value = "로그인3">	<!-- submit이 이뤄지지 않음  -->
+		
+</form>
+
+</body>
+</html>
