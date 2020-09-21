@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	/* 	
+  
+ 	/// ok클릭하면 p태그의 값이 ok, cancel클릭하면 p태그의 값이 cancel
+	function value_change(){
+		var p = document.getElementById("x");
+		if (p == "OK" ){
+			p.innerText = "OK"
+		}else{
+			p.innerText = "Cancel";
+		}
+	} 
+	*/
+	
+	 function value_change(){		
+		var label = event.target.innerText;
+		console.log(label);
+		document.getElementById("x").innerText = "label";
+	}  
+	
+
+	
+</script>
+
+</head>
+<body>
+	<p id = "x">Hello</p>
+	<button onclick = "value_change()">OK</button>	
+	<button onclick = "value_change()">cancel</button>	
+	
+	
+	
+</body>
+</html>

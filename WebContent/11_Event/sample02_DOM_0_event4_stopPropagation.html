@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function fun1(){
+		console.log("a");		
+	}
+	
+	function fun2(){
+		console.log("b");
+		event.stopPropagation();	//	이벤트가 동시 발생하는 것을 방지 (b가 a의 부모 레벨이라 그런가 b누르면 a까지 반응했는데 그걸 방지함)
+	}
+
+</script>
+
+
+</head>
+<body>
+	<div style="background-color:red" onclick ="fun1()">
+		a
+		<div style="background-color:orange" onclick = "fun2()">
+			b
+		</div>
+	</div>
+
+</body>
+</html>

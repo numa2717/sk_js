@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function value_change(){
+		var p = document.getElementById("x");
+		//p.innerText = "World";
+		p.innerHTML = "<h3>World</h3>";
+	}
+	function value_change2(){		
+		document.getElementByID("x").innerText = "Javascript";
+		document.getElementByID("x").innerHTML = "<h3>Javascript</h3>";
+	}
+	
+</script>
+
+</head>
+<body>
+	<p id = "x">Hello</p>
+	<button onclick = "value_change()">값변경</button>	
+	<button onclick = "value_change2()">값변경2</button>	
+	
+	
+	
+</body>
+</html>

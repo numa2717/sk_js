@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+
+	//	DOM접근은 Document객체를 참조하는
+	//	변수인 document로부터 시작한다.
+	
+	console.log(document);
+	console.dir(document);
+
+	var result = document.getElementById("x")	//id가 x인 요소의 값을 얻겠다.
+	console.log(result);
+					// ==> getElementById("x")의 값이 null이 나오는데, 시스템이 아직 x id의 p태그를 읽지 않은 상황이기 때문.
+					//		이를 해결하기 위해서 script를 p태그 밑으로 내리던지 아니면 해드에서 사용하려면 onload()를 이용하면된다.
+	
+</script>
+
+</head>
+<body>	
+	<p id = "x">Hello</p>	
+	
+<script type="text/javascript">
+	//	DOM접근은 Document객체를 참조하는
+	//	변수인 document로부터 시작한다.
+	
+	console.log(document);
+	console.dir(document);
+
+	var result = document.getElementById("x")	//id가 x인 요소의 값을 얻겠다.
+	console.log(result);
+	
+	
+</script>
+	
+	
+</body>
+</html>

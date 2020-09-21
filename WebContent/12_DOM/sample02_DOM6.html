@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function value_print(){
+		var result = document.getElementsByTagName("p");
+		console.log(result);
+		for (var i = 0; i <result.length; i++){
+			console.log(result[i].innerText);			
+		}
+	}
+		
+
+</script>
+
+</head>
+<body>
+	<p>Hello</p><br>	
+	<p>World</p><br>
+	<button onclick = "value_print()">값 출력</button>
+	
+</body>
+</html>

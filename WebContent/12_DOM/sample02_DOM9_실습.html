@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function totalt(){
+		
+		var input = document.getElementById("userid");
+		console.log(input.value)
+		console.dir(input);
+		
+		console.log("total");
+	}
+
+	
+		
+</script>
+
+</head>
+<body>
+가격:<input type="text" name = "price" id = "price" value = "450"><br>
+수량:<select name ="quantity" id = "quantity" onchange = "total()">
+	<option>5</option>
+	<option>10</option>
+	<option>15</option>
+</select><br>
+총합:<div id="result"></div>
+
+	
+</body>
+</html>
