@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>호이스팅</title>
+
+<script type="text/javascript">
+
+	/*
+		프로그램 실행전에 전체 코드를 미리 훓어보는 시간이 있다. (parsing)
+		1. 변수를 모두 찾는다.
+		2. 코드영역의 맨 위에 내부적으로 변수를 선언한다.
+			=> 호이스팅(hoisting) hoist 끌어 올리다.
+	*/
+	
+	console.log(num);
+	var num = 10;
+	console.log(num);
+	
+	
+	/*
+		var num; **Hoisting**
+		console.log(num);	undefined
+		var num = 10;
+		console.log(num);
+	*/
+	
+	
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

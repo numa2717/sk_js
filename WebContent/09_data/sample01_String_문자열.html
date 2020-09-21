@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문자열 데이터</title>
+<script type="text/javascript">
+
+	var str = "Hello";
+	var str2 = new String("hello");	// JavaScript의 객체 생성
+	//sss = String() 	//python의 객체 생성
+	console.log(str);
+	
+	console.log("1.문자열 길이:", str.length);	// python : len(str)
+	var x = str.charAt(1);
+	console.log("2.특정 위치의 문자(0번째와 1번째):", str.charAt(0), x);
+	
+	console.log("3. 문자열 연결:", "Hello"+" World");
+	console.log("3. 문자열 연결:", str+" World");
+	console.log("3. 문자열 연결:", str.concat(" World"));
+	console.log("3. 문자열 연결:", str.concat(" World", " I'm", " your_","mother."));
+	
+	console.log("4. 특정 문자의 위치:(H와 o의 위치?), 없는 문자 = -1", str.indexOf('H'), str.indexOf("o"));
+	
+	//특정 클래스의 함수 정보 확인 f String() => prototype
+	console.dir(String);
+	
+	console.log("5. 소문자로: ", str.toLowerCase());
+	console.log("6. 대문자로: ", str.toUpperCase());
+	
+	
+	var str = "sequence"
+	console.log(str);
+	console.log("7. substring(start, end):", str.substring(0,5));
+	console.log("8. substr(start, 갯수):", str.substr(0,5));
+	
+	//split
+	var str = "aaa/bbb/ccc";
+	var result = str.split("/")
+	console.log(str);
+	console.log("8. split(구분자):", result, result[0], result[1], result[2]);
+	
+	console.log("9. replace(old, new):", "hello".replace("h", "X"))
+	
+	var hello = "    Hello     "
+	console.log(hello,"length: ", hello.length);
+	console.log("10. trim():", "    Hello     ".trim());
+	console.log("10. trim().length():", "    Hello     ".trim().length);
+	
+	console.log("11. 특정문자 시작여부:", "hello".startsWith("h"));
+	console.log("12. 특정문자 종료여부:", "hello".endsWith("o"));
+	
+	console.log("13. 특정문자 포함 여부:", "Helloabcdefg003".includes("Hel"));
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

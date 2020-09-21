@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Call back function</title>
+<script type="text/javascript">
+			
+		
+		/*
+			콜백함수 ( Call Back )
+			a함수(n){
+				n();
+			}
+			
+			사용자의 A함수 호출 ====> A함수의 B함수 호출
+			 (사용자 호출)			(시스템 호출)
+			 
+			 ==> 콜백함수의 대표적인 활용은 '이벤트 처리'
+		*/
+		
+	//************Call Back***************
+		function b(){
+			console.log("b함수");							
+		}
+		
+		function c(){
+			console.log("c함수");	
+		}
+	//************************************
+	
+	
+	//~~~~~~사용자 호출 함수~~~~~~~~~~~~
+		function a(x){
+			console.log("함수 a에서 함수를 호출합니다.");
+			x();	
+		}
+	
+		a(b);	// 함수 b()를 함수 a()의 인자값으로 사용.
+		a(c);
+
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

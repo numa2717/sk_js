@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 선언식</title>
+<script type="text/javascript">
+
+	/*
+		Parsing phase
+		1. 함수명에 해당하는 변수 선언
+		2. 함수객체 생성
+		3. 함수객체를 변수에 저장
+		4. 변수 탐색
+		5. 코드 영역 상위 영역에 내부적으로 변수선언	
+	*/
+	
+	//1. 함수 정의 전에 호출 가능
+	console.log(fun1)
+	console.dir(fun1)
+	fun1();
+	function fun1(){	//var fun1 = fun1()
+		console.log("fun1");		
+	}
+	fun1();
+	
+	
+	//2. 일급객체
+	function fun2(){
+		console.log("fun2")
+	}
+	
+	var varable = fun2;	//가. 변수에 함수 저장
+	varable();
+	
+	function other_fun(f){
+		console.log("other_fun에서 fun2인자값으로 호출")
+		f();
+	}
+	
+	other_fun(fun2);	//나. 함수의 인자값으로 함수를 사용하여 호출
+
+	function fun4(){
+		console.log("fun4 호출, 리턴값 fun2")
+		return fun2;
+	}
+	var result = fun4();	//다. 함수리턴값으로 함수 사용
+	result();
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

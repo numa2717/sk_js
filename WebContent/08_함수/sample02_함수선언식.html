@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 선언식</title>
+<script type="text/javascript">
+
+	//1. 인자값 X, 리턴값 X
+	function fun1(){
+		console.log("fun1");		
+	}
+	fun1();
+	
+	
+	//2. 인자값 O, 리턴값 X
+	function fun2(n, n2){
+		console.log("fun2", n, n2)		
+	}
+	fun2(10, 20);
+	fun2("홍길동", 25);
+	// 파라미터 값이 2개인데, 인자값은 1개인 경우
+	fun2("홍길동");	// fun2 홍길동 undefined
+	
+	// 파라미터 값이 2개인데, 인자값은 3개인 경우
+	fun2("홍길동", "이순신", 40);	// fun2 홍길동 이순신
+	
+	
+	//3. 인자값 X, 리턴값 O
+	function fun3(){
+		console.log("fun3")
+		return 100;
+	}
+	
+	var result = fun3();
+	console.log(result);
+	
+	
+	//4. 인자값 O, 리턴값 O
+	function fun4(n, n2){
+		console.log("fun4");
+		return n + n2;		
+	}
+	
+	var result = fun4(10, 20);
+	console.log(result);
+
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

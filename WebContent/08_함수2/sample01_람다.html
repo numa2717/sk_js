@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>람다 함수</title>
+<script type="text/javascript">
+	
+	// Python의  람다함수
+	// 함수실행문장이 단일문장일 때만 선언 가능
+	// 익명함수의 다른 표현식, 선언을 위해 변수가 반드시 필요하다.
+	// 람다함수    : 익명함수의 또다른 함수 표현식
+	
+	// JavaScript의 람다함수 : 단일문장 및 다중문장도 가능, 익명함수의 또다른 함수 표현식
+	
+	//1. 인자값 X, 리턴값 X
+		//(가) 일반 함수 표현식
+		var fun1 = function(){
+			console.log("fun1");
+		};
+		fun1();
+		
+		
+		//(나) 람다 함수 표현식    [->(thin arrow, .java), =>(fat arrow, .js)]
+		var fun1 = ()=> {
+			console.log("fun1.람다");
+			console.log("fun2.람다");
+		};
+		fun1();
+	
+		
+	//2. 인자값 O, 리턴값 X
+		//(가) 일반 함수 표현식
+		var fun2 = function(n, n2){
+			console.log("fun2", n, n2);		
+		};
+		fun2(10, 20);
+		fun2("홍길동", 25);
+		// 파라미터 값이 2개인데, 인자값은 1개인 경우
+		fun2("홍길동");	// fun2 홍길동 undefined		
+		// 파라미터 값이 2개인데, 인자값은 3개인 경우
+		fun2("홍길동", "이순신", 40);	// fun2 홍길동 이순신
+		
+		
+		//(나) 람다 함수 표현식
+		var fun2 = (n) => {
+			console.log("fun2", n);
+		};
+		fun2(10);
+		fun2("홍길동", 25);
+		
+		var fun2 = n => {	//	파라미터변수 1개 ==> () 생략 가능
+			console.log("fun2", n);
+		};
+		
+		var fun2 = (n, n2) => {	//	파라미터변수 2개 이상 ==> () 생략 불가
+			console.log("fun2", n, n2);
+		};
+		
+		
+	/*생략
+	 3. 인자값 X, 리턴값 O
+		var fun3 = function(){
+			console.log("fun3");
+			return "안녕하세요~";
+		}
+		var result = fun3();
+		console.log(result);
+		
+		//print() 인쇄창 출력
+	*/
+	
+	
+	//3. 인자값 O, 리턴값 O
+		//(가) 일반 함수 표현식
+		var fun4 = function(n, n2){
+			console.log("fun4");
+			return n+n2;
+		};
+		
+		var result = fun4(20, 30);
+		console.log(result);
+		
+		
+		//(나) 람다 함수 표현식
+		var fun4 = (n, n2) => {
+			console.log("fun4");
+			return n+n2;
+		};
+		
+		var result = fun4(40,50);
+		console.log(result);
+		
+		//return 문장만 있는 경우
+		var fun4 = (n, n2)=>{
+			return n+n2;
+		};		
+		var fun4 = (n,n2) => n+n2;
+		
+		var result = fun4 (30, 40);
+		console.log("return만 있는 람다 함수:", result);
+	
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

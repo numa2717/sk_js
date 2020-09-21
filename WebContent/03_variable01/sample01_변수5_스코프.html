@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수 스코프(scope, 자세히 살피다, 범위, 영역, 시야)</title>
+
+<script type="text/javascript">
+
+	/*
+		Scope = var로 선언된 변수가 인식가능한 범위
+		
+		프로그램 언어 종류에 따른 variable scope
+		
+		1) 자바, C
+			=> 블럭 스코프 ( {} 안에서 선언된 변수는 블럭 안에서만 사용 가능 )
+			
+			
+		2) 파이썬, 자바스크립트
+			=> 함수 스코프 ( 함수안에서 선언된 변수는 안에서만 사용 가능 )
+	*/
+	
+	var num = 10;
+	if(num == 10){	//if 블럭
+		var x = 100;
+	}
+	console.log(num);
+	console.log(x);
+	
+	function kk(){	//함수 블럭
+		var xx = 1000;		
+	}
+	
+	console.log(xx);
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

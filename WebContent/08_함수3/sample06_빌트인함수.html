@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 - 빌트인 함수 (window 객체)</title>
+<script type="text/javascript">
+
+	/*
+		1. prompt()
+		2. print()
+		3. parseInt()
+		4. Number.parseInt()
+		5. alert()
+		
+		6. setTimeout() : 지정된 시간이 흐른 후 한 번만 함수 호출.
+			setTimeout(() => {
+				
+			}, milliseconds);
+	*/
+	
+		/* //3초 후에 fun1() 함수 호출
+		//setTimeout(함수, n/1000초);
+		setTimeout(function(){
+			console.log("hello")
+		}  , 3000 );		
+		setTimeout(()=>{},3000) */
+		
+		function fun1(){
+			console.log("fun1")
+		}		
+		setTimeout(fun1, 3000);			
+		
+		var kkk = function(){console.log("fun2");}
+		setTimeout(kkk, 6000);
+		setTimeout(function(){console.log("fun4");}, 8000);
+		
+		var zzz = () => {console.log("fun3");}
+		setTimeout(zzz, 7000);
+		setTimeout(() => {console.log("fun5");}, 9000);
+
+		
+		//7. setInterval()	: 지정 시간 이후 반복 함수 호출
+		/* setInterval(() => {			
+		}, milliseconds); */
+		
+		function fun10(){
+			console.log("aaa");
+		}		
+		
+		setInterval(fun10, 1000);
+		
+		setInterval(function(){console.log("bbb");}, 2000);
+		
+		setInterval(()=>{console.log("ccc");}, 3000);
+		
+		
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

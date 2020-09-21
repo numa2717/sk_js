@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM Level 0 - 인라인</title>
+<script type="text/javascript">
+	function onload_fun(){
+		console.log("onload_fun");
+	}
+
+	function fun1(){
+		console.log("fun1");
+	}
+	
+	function fun2(){
+		console.log("fun2");
+	}
+	
+	
+</script>
+
+</head>
+<body onload="onload_fun()">	<!-- onload => 시스템에서 html의 트리 구조가 완성되었음을 알려줌  -->
+<h2>DOM Level 0의 인라인 방식</h2>
+<button onclick ="fun1()">OK</button>
+<select onchange="fun1()">
+	<option>A1</option>
+	<option>A2</option>
+	<option>A3</option>
+	
+</select><br>
+아이디 : <input type="text" name = "userId" onfocus = "fun1()" onblur = "fun2()"><br>
+비밀번호 : <input type="password" name = "passwd"><br>
+사과 <input type="checkbox" name ="apple" onclick = "fun1()"><br>
+배 <input type="checkbox" name ="peer" onchange = "fun1()"><br>
+<img alt="이미지가 없습니다." src="../images/apple.jpg" width = "200" height = "200" onmouseover="fun1()" onmouseout ="fun2()">
+<br>이메일:<input type="text" name = "email" onkeyup="fun1()">
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// History 객체(클래스)	:	브라우저의 앞/뒤
+		
+	console.log(history)
+	
+	function h2(){
+		history.back();
+	}
+	
+	function h1(){
+		history.go(-2);
+	}
+	
+</script>
+
+</head>
+<body>
+<h1>세번째화면(history3.html)</h1>
+<a href="javascript:h2()">이전화면(a태그)</a>
+<button onclick = "h2()">이전화면(click버튼)</button>
+<button onclick = "h1()">첫 화면(onclick버튼)</button>
+
+</body>
+</html>

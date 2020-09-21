@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>논리 연산자</title>
+<script type="text/javascript">
+		
+	//1. && 그리고
+	console.log(true&&true)		//true
+	console.log(true&&false)	//false
+	console.log(false&&true)	//false
+	console.log(false&&false)	//false
+	console.log(3>4 && 10 %2 ==0);	
+	
+	//2. || 또는
+	console.log(true&&true)		//true
+	console.log(true&&false)	//true
+	console.log(false&&true)	//true
+	console.log(false&&false)	//false	
+	
+	//3. ! 부정
+	console.log(!true)	//false
+	console.log(!false)	//true
+	
+	/*
+		true/false만 논리값이 아니다.
+		
+		1) falst로 처리되는 데이터
+			-0
+			-""
+			-null
+			-undefined
+			-NaN	(Not a Number)
+			
+		2) True로 처리되는 데이터
+			-위의 5가지 제외 모두
+	*/
+	console.log(!0);
+	console.log(!"");
+	console.log(!null);
+	console.log(!undefined);
+	console.log(!NaN);
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

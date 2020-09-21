@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 - default parameter (ECMAScript6)</title>
+<script type="text/javascript">
+
+	function fun1(n, n2){
+		console.log(n, n2);
+	}
+	
+	fun1(10, 20);
+	fun1(100);	// n2 = undefined
+
+	function fun2(n = 1000, n2 = 2000){
+		console.log(n, n2);
+	}
+	
+	fun2(10, 20);
+	fun2(100);	// n2 = 2000
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

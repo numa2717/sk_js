@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	console.dir(Array);
+	
+	var n = [76, 3, 26];
+	
+	/*
+	Python
+	변수.reverse()	: 원본 변경
+	변수2 = 변수.reversed()	: 변경해서 복사본 생성 (변수에 저장)
+	*/	
+	console.log("원본 : ", n);
+	n.reverse();
+	console.log("1. reverse():", n);
+	
+	var n = [9,8,7,6,5,4,3,2,1];
+	var sub_arr = n.slice(0,4);	// 0 ~ 3까지, slice(start, end)
+	console.log("원본:", sub_arr);
+	console.log("2. slice:", sub_arr);
+
+	var m = ["A", "B", "C"];
+	console.log("3.특정문자위치:", m.indexOf('A'));
+	console.log("3.특정문자위치:", m.indexOf('A'));	//없으면 -1
+	
+	//정렬
+	var n = [7, 6, 10, 35, 59, 100, 1];
+	n.sort(function(a,b){return a-b});
+	console.log("4. sort()정렬 / 오름차순:", n);
+	n.sort(function(a,b){return b-a;});
+	console.log("5. 정렬 / 내림차순:", n);
+	
+	//join
+	var m = ['A', 'B', 'C'];
+	//python : " 와".join(["A", "B", "C"])
+	console.log("6. Join:", m.join("와 "));
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

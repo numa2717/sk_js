@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 - 중첩함수</title>
+<script type="text/javascript">
+		
+		/*			
+			중첩 함수
+				사용자는 outer 함수만 접근 가능
+				inner 함수는 outer 함수에서 접근 가능
+			
+		*/
+		
+		function outer(){			
+			
+			inner();
+			
+			function inner(){
+				console.log("inner 함수")
+			}
+		}
+		
+		outer();
+		//inner(); 에러, 외부 접근 불가
+		
+		
+		
+		function outer2(){						
+			var result = inner2();			
+			
+			function inner2(){
+				return 100;
+			}			
+			return result;
+		}
+		
+		var xxx = outer2();
+		console.log(xxx);
+		
+		
+/* 		function* outer(){
+				console.log("outer 함수")
+				yield;
+				inner();
+			function inner(){
+				console.log("inner 함수")
+			}
+		}
+		
+		var a = outer();
+		console.log(outer)
+		a.next();
+		a.next(); */
+		
+			
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

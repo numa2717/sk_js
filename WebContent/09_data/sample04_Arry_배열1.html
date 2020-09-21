@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//1. 배열 생성방법
+	var n = new Array();
+	var n2 = [];	//권장	
+	
+	var n3 = new Array(10, 20, 30);
+	var n4 = [10, 20, 30];	//권장
+	
+	console.dir(Array)
+	
+	//2. 배열 요소 접근
+	var n = [10, 20, 30, 1, 2, 3, 4, 5, 6];
+	console.log("1. 첫 번째 요소:", n[0]);
+	console.log("2. 두 번째 요소:", n[1]);
+	console.log("3. 배열 길이:", n.length);
+	
+	
+	for(var i=0; i < n.length; i++){
+		console.log(">>>", n[i]);
+	}
+	for(var i of n){
+		console.log(">>>", i);
+	}
+	for(var i in n){
+		console.log(">>>", n[i])
+	}
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

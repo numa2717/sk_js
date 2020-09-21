@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var childWin;
+
+	function child_open(){
+		childWin = window.open("Window_child.html", "childWin", "width=250, height =250");
+	}
+	
+	function child_close(){
+		childWin.close();
+	}
+	
+	function current_close(){
+		window.close();
+	}
+
+</script>
+
+</head>
+<body>
+<h2>Window_parents(부모창)</h2>
+<button onclick = "child_open()">자식창 열기</button>
+<button onclick = "child_close()">자식창 닫기</button>
+<button onclick = "current_close()">현재창 닫기</button>
+
+</body>
+</html>

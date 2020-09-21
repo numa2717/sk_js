@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열</title>
+<script type="text/javascript">
+	
+	console.dir(Array);
+	
+	var n = [];
+	
+	//1. 배열에 값 추가	==> 뒤에서 추가
+	n.push(10);
+	n.push(1,2,3);
+	console.log("1. push:", n);
+	
+	//2. 값 삭제	==> 뒤부터 삭제
+	n.pop();
+	n.pop();
+	console.log("2. pop으로 삭제:", n);
+	
+	
+	//3. 중간 삽입, 중간 삭제
+	/*
+		splice(start, 삭제할 갯수, 추가할 데이터, ...)
+			예> splice(1, 4)==> 1부터 시작해서 4개 요소 삭제
+				splice (1, 2, "홍길동") ==> 1부터 시작해서 2개 요소 삭제하고 "홍길동" 삽입
+				splice (1, 0, 1,2,3)==> 1부터 시작해서 0개 요소 삭제하고 1, 2, 3 추가
+	*/
+	
+	var m = ["홍길동", "이순신", 10, "유관순"];
+	console.log("m =", m)
+	console.log("3. m.splice(1,2)", m.splice(1, 2));
+	console.log("m =", m)
+	console.log("3. m.splice(1,2, 홍길동2)", m.splice(1, 2, "홍길동2"));
+	console.log("m =", m)
+		
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

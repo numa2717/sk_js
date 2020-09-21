@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>let 이용한 변수</title>
+<script type="text/javascript">
+
+	/*
+	자바스크립트 변수 사용방법 2가지
+		1.var 이용
+			-변수명 중복 가능
+			-Hoisting 가능
+			-Function Scope
+		-ECMAScript5	(일반적으로 말하는 JavaScript)
+			
+		2.let 이용
+			-변수명 중복 불가
+			-Hoisting 불가
+			-Block Scope
+		-ECMAScript6	(global Standard JavaScript)
+
+	*/
+	
+	//console.log(num)	** Hoisting 불가
+	let num = 10;
+	//let num = "홍길동";	** 변수명 중복 불가
+	console.log(num);
+
+	if(num==10){
+		let x = 100;		
+	}
+	//console.log(x); Block Scope라서 Error	
+	
+	
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

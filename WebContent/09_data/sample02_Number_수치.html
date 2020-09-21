@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>수치형</title>
+<script type="text/javascript">
+
+	var n = 10;	//권장
+	var n2 = new Number(10);
+	
+	console.dir(Number);
+	
+	console.log("1. isNaN:", Number.isNaN(n));
+	console.log("2. parseInt:", Number.parseInt("15")+10);	
+	console.log("3. parseFloat()", Number.parseFloat("3.14"+10));
+	
+	console.log("4. tostring()", n.toString()+"입니다.")		// 10진수
+	console.log("4. tostring()", n.toString(2)+"입니다.")		// 2진수
+	console.log("4. tostring()", n.toString(8)+"입니다.")		// 8진수
+	console.log("4. tostring()", n.toString(16)+"입니다.")	// 16진수
+	
+	var n = 3.141592;
+	console.log("5. 지정된 자리수 표현:", n.toFixed());	// 3
+	console.log("5. 지정된 자리수 표현:", n.toFixed(2));	// 3.14	
+	console.log("5. 지정된 자리수 표현:", n.toFixed(5));	// 3.14159
+
+	
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

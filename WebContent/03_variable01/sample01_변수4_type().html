@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수 타입 체크</title>
+
+<script type="text/javascript">
+
+	var num = 10;
+	console.log("1. 정수:", num, typeof num);	//10 number
+	
+	var num = 3.14;
+	console.log("2. 실수:", num, typeof num);	// 3.14 number
+	
+	var num = true;
+	console.log("3. 논리:", num, typeof num); // true boolean
+	
+	var num = undefined;
+	console.log("4. undefined:", num, typeof num); // undefined undefined
+	
+	var num = null;
+	console.log("5. null:", num, typeof num); // null object
+
+	var num = NaN;
+	console.log("6. NaN:", num, typeof num); // NaN number
+	
+	var num = {"name":"홍길동", "age":20};
+	console.log("7. JSON 객체:", num, typeof num); // NaN number
+
+	var num = [10, 20, 30, 40];
+	console.log("8. JSON 배열객체:", num, typeof num); // NaN number
+	
+	var num = function() {};
+	console.log("9. 함수 객체:", num, typeof num); // NaN number
+	
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

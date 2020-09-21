@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 표현식</title>
+<script type="text/javascript">
+
+	//1. 함수표현식은 함수 정의 후에 호출 가능하다.
+	
+		fun1();
+		var fun1 = function(){	 //함수 선언때는 함수 객체가 hoisting이 되는데
+			console.log("fun1"); //함수 표현식의 경우 함수 객체는 hoisiting 되지 않고 변수 fun1만 hoisting됨
+		}						 //변수 fun1만 선언되고, 함수 객체는 선언되지 않은 상태로 Parsing		
+		fun1();
+	
+	/*
+		파싱단계 코드
+		fun1();		// 에러, fun1 is not a function
+		var fun1;	//undefined		
+	*/
+	
+	//2. 일급객체
+		var fun2 = function(){
+			console.log("fun2");
+		}
+		
+		
+		var varable = fun2;	//가. 변수에 함수 저장
+		varable();
+		
+		var other_function = function(f){
+			console.log("other_fun에서 fun2인자값으로 호출")
+			f();
+		}
+		
+		other_function(fun2);	//나. 함수호출시 인자값으로 함수 사용
+		
+		var fun4 = function(){
+			console.log("fun4 호출, 리턴값 fun2")
+			return fun2;
+		}
+		var result = fun4();	//다. 함수리턴값으로 함수 사용
+		result();	
+		
+
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
